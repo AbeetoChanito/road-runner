@@ -144,8 +144,8 @@ fun interface ConditionalFunction {
  */
 data class WaitUntilAction(
     val f: ConditionalFunction,
-    val minTime: Double,
-    val maxTime: Double
+    val minTime: Double = 0.0,
+    val maxTime: Double = Double.MAX_VALUE
 ) : Action {
     private var beginTs = -1.0;
 
